@@ -102,7 +102,7 @@ def create_app(config_class=Config):
         meter_data.longitude = data.get('longitude')
 
         db.session.add(meter_data)
-        for image in data.get('image'):
+        for image in data.get('images'):
             unique_filename = str(uuid.uuid4()) + '.' + data['type'].lower()
 
             save_image(
